@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>International Women's Day 2026 💜</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --purple: #9333ea;
+      --pink: #ec4899;
+      --lavender: #c084fc;
+      --dark: #0f0720;
+      --card: rgba(255,255,255,0.05);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ── Particles ── */
+    #particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      animation: drift linear infinite;
+      opacity: 0.4;
+    }
+
+    @keyframes drift {
+      0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+      10%  { opacity: 0.4; }
+      90%  { opacity: 0.4; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: radial-gradient(ellipse at top, #2d0a5e 0%, var(--dark) 70%);
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--purple), var(--pink));
+      padding: 6px 20px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #fff 0%, var(--lavender) 50%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: #d8b4fe;
+      max-width: 600px;
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+
+    .scroll-hint {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* ── Stats ── */
+    .stats {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, var(--dark), #1a0a3e);
+    }
+
+    .stat-card {
+      background: var(--card);
+      border: 1px solid rgba(192,132,252,0.2);
+      border-radius: 20px;
+      padding: 32px 40px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, border-color 0.3s;
+      min-width: 160px;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--lavender);
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      background: linear-gradient(135deg, var(--lavender), var(--pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: #a78bfa;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* ── Quotes ── */
+    .quotes-section {
+      position: relative;
+      z-index: 1;
+      padding: 80px 20px;
+      background: #1a0a3e;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      text-align: center;
+      margin-bottom: 50px;
+      color: #f3e8ff;
+    }
+
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .quote-card {
+      background: var(--card);
+      border: 1px solid rgba(192,132,252,0.15);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .quote-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(147,51,234,0.2);
+    }
+
+    .quote-mark {
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--purple);
+      font-family: 'Playfair Display', serif;
+      opacity: 0.5;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+    }
+
+    .quote-text {
+      font-style: italic;
+      color: #e9d5ff;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+
+    .quote-author {
+      font-size: 0.85rem;
+      color: var(--lavender);
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    /* ── Women to Celebrate ── */
+    .women-section {
+      position: relative;
+      z-index: 1;
+      padding: 80px 20px;
+      background: linear-gradient(180deg, #1a0a3e, var(--dark));
+    }
+
+    .women-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .woman-card {
+      background: var(--card);
+      border: 1px solid rgba(236,72,153,0.2);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .woman-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--pink);
+    }
+
+    .woman-emoji {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .woman-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: #f3e8ff;
+      margin-bottom: 6px;
+    }
+
+    .woman-role {
+      font-size: 0.8rem;
+      color: #a78bfa;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Message ── */
+    .message-section {
+      position: relative;
+      z-index: 1;
+      padding: 100px 20px;
+      background: radial-gradient(ellipse at center, #2d0a5e 0%, var(--dark) 70%);
+      text-align: center;
+    }
+
+    .big-message {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 4vw, 2.8rem);
+      color: #f3e8ff;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* ── Footer ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--dark);
+      border-top: 1px solid rgba(192,132,252,0.1);
+    }
+
+    footer p {
+      color: #6b7280;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    footer .hearts {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating particles -->
+  <div id="particles"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="badge">March 8 · 2026</div>
+    <h1>International<br/>Women's Day</h1>
+    <p class="hero-sub">
+      Celebrating the courage, brilliance, and resilience of women everywhere — 
+      those who came before, those here now, and those still becoming.
+    </p>
+    <span class="scroll-hint">↓ scroll ↓</span>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <div class="stat-card">
+      <span class="stat-number">1911</span>
+      <span class="stat-label">First Women's Day</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">100+</span>
+      <span class="stat-label">Countries Celebrating</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">4B+</span>
+      <span class="stat-label">Women in the World</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">∞</span>
+      <span class="stat-label">Stories to Tell</span>
+    </div>
+  </section>
+
+  <!-- Quotes -->
+  <section class="quotes-section">
+    <h2 class="section-title">Words That Move Mountains</h2>
+    <div class="quotes-grid">
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">I am no longer accepting the things I cannot change. I am changing the things I cannot accept.</p>
+        <span class="quote-author">— Angela Davis</span>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">We realize the importance of our voices only when we are silenced.</p>
+        <span class="quote-author">— Malala Yousafzai</span>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">There is no limit to what we, as women, can accomplish.</p>
+        <span class="quote-author">— Michelle Obama</span>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">A woman with a voice is, by definition, a strong woman.</p>
+        <span class="quote-author">— Melinda Gates</span>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">The most courageous act is still to think for yourself. Aloud.</p>
+        <span class="quote-author">— Coco Chanel</span>
+      </div>
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">I am not free while any woman is unfree, even when her shackles are very different from my own.</p>
+        <span class="quote-author">— Audre Lorde</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Women to Celebrate -->
+  <section class="women-section">
+    <h2 class="section-title">Icons Who Shaped History</h2>
+    <div class="women-grid">
+      <div class="woman-card">
+        <span class="woman-emoji">🔬</span>
+        <div class="woman-name">Marie Curie</div>
+        <div class="woman-role">Scientist · Pioneer</div>
+      </div>
+      <div class="woman-card">
+        <span class="woman-emoji">✊</span>
+        <div class="woman-name">Rosa Parks</div>
+        <div class="woman-role">Activist · Icon</div>
+      </div>
+      <div class="woman-card">
+        <span class="woman-emoji">📚</span>
+        <div class="woman-name">Malala Yousafzai</div>
+        <div class="woman-role">Educator · Nobel Laureate</div>
+      </div>
+      <div class="woman-card">
+        <span class="woman-emoji">💻</span>
+        <div class="woman-name">Ada Lovelace</div>
+        <div class="woman-role">Mathematician · First Programmer</div>
+      </div>
+      <div class="woman-card">
+        <span class="woman-emoji">🎨</span>
+        <div class="woman-name">Frida Kahlo</div>
+        <div class="woman-role">Artist · Symbol of Strength</div>
+      </div>
+      <div class="woman-card">
+        <span class="woman-emoji">🚀</span>
+        <div class="woman-name">Katherine Johnson</div>
+        <div class="woman-role">NASA Mathematician · Trailblazer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing Message -->
+  <section class="message-section">
+    <p class="big-message">
+      "To every woman who was told she couldn't —<br/>
+      look how far you've come."
+    </p>
+    <div style="font-size:2.5rem">💜 🌸 💜</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="hearts">💜</span>
+    <p>Happy International Women's Day · March 8, 2026</p>
+  </footer>
+
+  <script>
+    // Generate floating particles
+    const container = document.getElementById('particles');
+    const colors = ['#9333ea', '#ec4899', '#c084fc', '#f9a8d4', '#818cf8'];
+    for (let i = 0; i < 40; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 8 + 3;
+      p.style.cssText = `
+        width: ${size}px;
+        height: ${size}px;
+        left: ${Math.random() * 100}%;
+        background: ${colors[Math.floor(Math.random() * colors.length)]};
+        animation-duration: ${Math.random() * 15 + 10}s;
+        animation-delay: ${Math.random() * 10}s;
+      `;
+      container.appendChild(p);
+    }
+  </script>
+
+</body>
+</html>

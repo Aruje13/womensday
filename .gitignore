@@ -1,0 +1,9 @@
+*.pdf
+*.dmg
+*.pkg
+*.wav
+*.pem
+*.json
+!package.json
+.DS_Store
+.localized
